@@ -96,12 +96,12 @@ void levelOrder(struct Node *root)
 {
     if (root == NULL)
         return;
-    struct Node *queue[100]; //Static Queue for simplicity, assuming max 100 nodes
+    struct Node *queue[100]; 
     int front = 0, rear = 0;
     queue[rear++] = root;
     while (front < rear)
     {
-        struct Node *curr = queue[front++]; //Dequeue the front node
+        struct Node *curr = queue[front++]; 
         printf("%d ", curr->rollNo);
         if (curr->left != NULL)
             queue[rear++] = curr->left;
