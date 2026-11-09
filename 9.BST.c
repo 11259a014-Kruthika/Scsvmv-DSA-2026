@@ -26,7 +26,7 @@ struct Node *insert(struct Node *root, int dataToInsert)
     else if (dataToInsert > root->rollNo)
         root->right = insert(root->right, dataToInsert);
 
-    return root; // Returning the updated tree's root pointer
+    return root; 
 }
 
 struct Node *findMin(struct Node *root)
@@ -64,8 +64,7 @@ struct Node *deleteNode(struct Node *root, int rollNo)
     }
     return root;
 }
-
-//Left - Root - Right
+
 void inOrder(struct Node *root)
 {
     if (root == NULL)
@@ -74,8 +73,7 @@ void inOrder(struct Node *root)
     printf("%d ", root->rollNo);
     inOrder(root->right);
 }
-
-//Root - Left - Right
+
 void preOrder(struct Node *root)
 {
     if (root == NULL)
@@ -84,8 +82,7 @@ void preOrder(struct Node *root)
     preOrder(root->left);
     preOrder(root->right);
 }
-
-//Left - Right - Root
+
 void postOrder(struct Node *root)
 {
     if (root == NULL)
@@ -94,8 +91,7 @@ void postOrder(struct Node *root)
     postOrder(root->right);
     printf("%d ", root->rollNo);
 }
-
-//Breadth-First Search (BFS) or Level Order Traversal
+
 void levelOrder(struct Node *root)
 {
     if (root == NULL)
