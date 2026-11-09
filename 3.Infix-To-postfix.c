@@ -109,7 +109,7 @@ void infixToPostfix(char infix[], char postfix[])
            
             if (top != -1)
             {
-                pop(); // Remove the '('
+                pop(); 
             }
         }
     }
