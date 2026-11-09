@@ -7,7 +7,7 @@ struct Node
     struct Node *next;
 };
 
-struct Node *rear = NULL; /* rear points to last node; rear->next is front */
+struct Node *rear = NULL;
 
 void enqueue(int token)
 {
