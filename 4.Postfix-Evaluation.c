@@ -35,8 +35,8 @@ int main()
         else if ((c == ' ' || c == '\n') && is_building_num == 1)
         {
             push(current_num);
-            current_num = 0;     // Reset for the next number
-            is_building_num = 0; // Reset flag
+            current_num = 0;    
+            is_building_num = 0; 
         }
         else if (c == '+' || c == '-' || c == '*' || c == '/')
         {
