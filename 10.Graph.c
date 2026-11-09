@@ -1,7 +1,4 @@
-/**
- * Graph Traversal Algorithms - BFS & DFS
- * Case Study:"Course Prerequisite" graph between subjects, to advise students which order to study them 
-*/
+
 #include <stdio.h>
 #define MAX 10
 
