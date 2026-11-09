@@ -75,38 +75,38 @@ void infixToPostfix(char infix[], char postfix[])
             
             if (top == -1 || precedence(peek()) < precedence(c) || peek() == '(')
             {
-                // Push the operator onto the stack
+                
                 push(c);
             }
-            // Step 4.II.B: Otherwise (top has higher or equal precedence)
+            
             else
             {
-                // Pop operators from stack and add to postfix until condition is true
+              
                 while (top != -1 && peek() != '(' && precedence(peek()) >= precedence(c))
                 {
                     postfix[j++] = pop();
                 }
-                // Then push the current operator onto the stack
+                
                 push(c);
             }
         }
 
-        // Step 4.III: If token is '('
+        
         else if (c == '(')
         {
-            // Push it onto the stack
+            
             push(c);
         }
 
-        // Step 4.IV: If token is ')'
+       
         else if (c == ')')
         {
-            // Pop operators from stack and add to postfix until '(' is found
+            
             while (top != -1 && peek() != '(')
             {
                 postfix[j++] = pop();
             }
-            // Ignore both parentheses (no need to add them to postfix expression)
+           
             if (top != -1)
             {
                 pop(); // Remove the '('
@@ -114,13 +114,13 @@ void infixToPostfix(char infix[], char postfix[])
         }
     }
 
-    // Step 6: Pop any remaining operators from the stack
+  
     while (top != -1)
     {
         postfix[j++] = pop();
     }
 
-    // Output the postfix expression
+  
     postfix[j] = '\0';
 }
 
